@@ -19,8 +19,13 @@ class _RecipeViewState extends State<RecipeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Recipe"),
-      ),
+          centerTitle: true,
+          backgroundColor: Colors.blueGrey,
+          title: Text(
+            "Recipe",
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
+          ),
+          shadowColor: Colors.black45),
       body: WebView(
         initialUrl: widget.url,
         onWebViewCreated: ((WebViewController webViewController) {
